@@ -47,9 +47,13 @@
         (map create-robot-row data)]])
 
 (defcard-rg robots-table
-  [:div.row
-    [:div.col-xs-12
-      [:h1 "Robots here!"]
-      [:hr]
-      (create-robot-table @data)]])
+  (fn []
+    [:div.row
+      [:div.btn.btn-danger 
+       {:on-click #(reset! data [{:id 1 :name "Robot1" :color "red" :ipaddress "123" :url "https://images-na.ssl-images-amazon.com/images/I/41IXITCtVwL._SY300_.jpg"}])}
+       "Dont click!"]
+      [:div.col-xs-12
+        [:h1 "Robots here!"]
+        [:hr]
+        (create-robot-table @data)]]))
       
