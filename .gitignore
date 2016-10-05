@@ -65,3 +65,5 @@ pom.xml.asc
 .lein-failures
 .nrepl-port
 /resources/public/js/
+figwheel_server.log
+*.log
